@@ -11,7 +11,7 @@ describe('Bookshelf', function(){
 
   describe('new Bookshelf()', function(){
 
-    it('accepts a maximum book number as an artument', function(){
+    it('accepts a maximum book number as an argument', function(){
       expect(smallBookshelf.maxBooks).toBe(5);
     });
 
