@@ -13,17 +13,7 @@ describe('Person', function() {
       expect(anonymous).toBeDefined();
       expect(anonymous.name).toBe('Jane Doe');
     });
-  });
 
-  describe('greet()', function() {
-    it('returns a string with a greeting that includes the persons name', function() {
-      var nick = new Person('Nick');
-
-      expect(nick.greet()).toBe('Nick says hello!');
-    });
-  });
-
-  describe('new Person() creates an object that is an instance of Person constructor', function() {
     it('returns true when checking instance prototype', function() {
       var chelsea = new Person("Chelsea");
       var jesse = new Person("Jesse");
@@ -41,6 +31,20 @@ describe('Person', function() {
 
       expect(jesse instanceof Person).toBe(false);
     })
-  })
+  });
+
+  describe('greet()', function() {
+    it('returns a string with a greeting that includes the persons name', function() {
+      var nick = new Person('Nick');
+
+      expect(nick.greet()).toBe('Nick says hello!');
+    });
+
+    it('does not belong to the individual instance of Person', function(){
+      var nick = new Person('Nick');
+
+      expect(nick.hasOwnProperty("greet")).toBe(false);
+    })
+  });
 
 });
