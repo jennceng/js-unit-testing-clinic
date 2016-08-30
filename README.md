@@ -5,6 +5,7 @@ Very similar to RSpec for ruby: <http://jasmine.github.io/2.0/introduction.html>
 ---
 
 ### Pre-defined Matchers
+* list is taken from [Testing JS using Jasmine](http://www.htmlgoodies.com/beyond/javascript/testing-javascript-using-the-jasmine-framework.html)
 
 * `toBe`: represents the exact equality (===) operator.
 * `toEqual`: represents the regular equality (==) operator.
